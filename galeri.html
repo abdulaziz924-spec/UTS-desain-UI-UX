@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri</title>
+    <style>
+        :root {
+            --green: #087f5b;
+            --dark: #12372b;
+            --mint: #e8f5ef;
+            --ink: #18332b;
+            --muted: #718078
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f8f6;
+            color: var(--ink);
+            line-height: 1.6
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            background: #fff;
+            box-shadow: 0 4px 20px #12372b0b;
+            position: sticky;
+            top: 0;
+            z-index: 5
+        }
+
+        .brand {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--dark)
+        }
+
+        .brand span {
+            color: var(--green)
+        }
+
+        nav {
+            display: flex;
+            gap: 26px
+        }
+
+        nav a {
+            color: #53645c;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--green)
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #103d2d, #087f5b);
+            color: white;
+            padding: 58px 7% 70px
+        }
+
+        .hero small {
+            color: #bdebd5;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 50px);
+            margin: 10px 0
+        }
+
+        .hero p {
+            color: #d6eee2;
+            max-width: 600px
+        }
+
+        .gallery {
+            max-width: 1120px;
+            margin: 42px auto 65px;
+            padding: 0 22px
+        }
+
+        .foto {
+            float: left;
+            width: 31.333%;
+            margin: 1%;
+            background: #18923c;
+            border-radius: 17px;
+            overflow: hidden;
+            box-shadow: 0 10px 28px #12372b0c;
+            transition: transform .25s, box-shadow .25s
+        }
+
+        .foto:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 35px #12372b18
+        }
+
+        .foto img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--mint)
+        }
+
+        .caption {
+            padding: 17px 18px 20px
+        }
+
+        .caption span {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--green);
+            text-transform: uppercase
+        }
+
+        .caption h3 {
+            margin: 5px 0;
+            font-size: 18px
+        }
+
+        .caption p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both
+        }
+
+        footer {
+            clear: both;
+            text-align: center;
+            padding: 24px;
+            background: #103d2d;
+            color: #d7e9df;
+            font-size: 13px
+        }
+
+        @media(max-width:800px) {
+            .foto {
+                width: 48%;
+                margin: 1%
+            }
+        }
+
+        @media(max-width:540px) {
+            .navbar {
+                padding: 16px 5%;
+                align-items: flex-start;
+                gap: 14px;
+                flex-direction: column
+            }
+
+            nav {
+                gap: 17px;
+                flex-wrap: wrap
+            }
+
+            .foto {
+                width: 98%;
+                margin: 1%
+            }
+
+            .foto img {
+                height: 230px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="brand">Galeri<span>Gambar</span></div>
+        <nav><a href="index.html">Beranda</a><a href="kampus.html">Profil Kampus</a><a class="active"
+                href="galeri.html">Galeri</a></nav>
+    </header>
+    <main class="gallery clearfix">
+        <article class="foto"><img src="images/foto1.jpg"></article>
+        <article class="foto"><img src="images/foto2.jpg"></article>
+        <article class="foto"><img src="images/foto3.jpg"></article>
+        <article class="foto"><img src="images/foto4.jpg"></article>
+        <article class="foto"><img src="images/foto5.jpg" ></article>
+        <article class="foto"><img src="images/foto6.jpg" ></article>
+    </main>
+    <footer>© 2026 Galeri.</footer>
+</body>
+
+</html>

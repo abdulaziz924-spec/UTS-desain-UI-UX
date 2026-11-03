@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <style>
+        :root {
+            --green: #087f5b;
+            --dark: #12372b;
+            --mint: #e8f5ef;
+            --ink: #18332b;
+            --muted: #718078;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f8f6;
+            color: var(--ink);
+            line-height: 1.6
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            background: #fff;
+            box-shadow: 0 4px 20px #12372b0b;
+            position: sticky;
+            top: 0;
+            z-index: 5
+        }
+
+        .brand {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -.5px
+        }
+
+        .brand span {
+            color: var(--green)
+        }
+
+        nav {
+            display: flex;
+            gap: 26px
+        }
+
+        nav a {
+            color: #53645c;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--green)
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #103d2d, #087f5b);
+            color: #fff;
+            padding: 65px 7% 95px
+        }
+
+        .hero small {
+            color: #bdebd5;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 54px);
+            line-height: 1.12;
+            margin: 12px 0;
+            max-width: 650px
+        }
+
+        .hero p {
+            color: #d6eee2;
+            max-width: 570px;
+            margin: 0
+        }
+
+        .profile-wrap {
+            max-width: 1050px;
+            margin: -48px auto 60px;
+            padding: 0 22px
+        }
+
+        .profile-card {
+            display: flex;
+            gap: 36px;
+            align-items: center;
+            background: #fff;
+            padding: 34px;
+            border-radius: 22px;
+            box-shadow: 0 18px 55px #12372b12
+        }
+
+        .photo {
+            width: 230px;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 17px;
+            background: var(--mint)
+        }
+
+        .info {
+            flex: 1
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--mint);
+            color: var(--green);
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .info h2 {
+            font-size: 30px;
+            margin: 12px 0 5px
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin: 0 0 22px
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px
+        }
+
+        .detail {
+            background: #f7faf8;
+            border: 1px solid #edf2ee;
+            padding: 13px 15px;
+            border-radius: 12px
+        }
+
+        .detail b {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #819087
+        }
+
+        .detail span {
+            font-weight: 700;
+            font-size: 14px
+        }
+
+        .about {
+            max-width: 1000px;
+            margin: 0 auto 65px;
+            padding: 0 22px
+        }
+
+        .section-title {
+            font-size: 25px;
+            margin: 0 0 15px
+        }
+
+        .about-card {
+            background: #fff;
+            border: 1px solid #edf1ed;
+            border-radius: 18px;
+            padding: 25px;
+            color: #607067
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background: #103d2d;
+            color: #d7e9df;
+            font-size: 13px
+        }
+
+        @media(max-width:700px) {
+            .navbar {
+                padding: 16px 5%;
+                align-items: flex-start;
+                gap: 14px;
+                flex-direction: column
+            }
+
+            nav {
+                gap: 17px;
+                flex-wrap: wrap
+            }
+
+            .hero {
+                padding: 48px 6% 82px
+            }
+
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px
+            }
+
+            .photo {
+                width: 190px;
+                height: 220px
+            }
+
+            .details {
+                text-align: left;
+                grid-template-columns: 1fr
+            }
+
+            .info h2 {
+                font-size: 25px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="brand">Profil <span> Abdul Aziz Faozan</span></div>
+        <nav>
+            <a class="active" href="index.html">Beranda</a>
+            <a href="kampus.html">Profil Kampus</a>
+            <a href="galeri.html">Galeri</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <small>Student profile</small>
+        <h1>Kenali Saya Lebih Dekat.</h1>
+        <p>Selamat datang di halaman profil pribadi saya. Tempat untuk mengenal perjalanan, minat, dan aktivitas saya
+            sebagai mahasiswa.</p>
+    </section>
+    <main>
+        <section class="profile-wrap">
+            <div class="profile-card">
+                <img class="photo" src="images/profil.jpg" alt="Foto profil mahasiswa">
+                <div class="info">
+                    <h2>Abdul Aziz Faozan</h2>
+                    <p class="subtitle"><span class="tag">MAHASISWA</span> • <span class="tag">SEMESTER 3</span></p>
+                    <div class="details">
+                        <div class="detail"><b>Nomor Induk Mahasiswa</b><span>202516020001</span></div>
+                        <div class="detail"><b>Program Studi</b><span>Rekayasa Perangkat Lunak</span></div>
+                        <div class="detail"><b>Fakultas</b><span>Fakultas Sains dan Teknologi</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="about-card">Saya adalah mahasiswa Semester 3 di Universitas Muhammadiyah Cileungsi dan juga tertarik pada dunia teknologi, desain, dan pengembangan
+                website. Saya senang mempelajari hal baru, bekerja sama dalam tim, serta mengembangkan kemampuan melalui
+                berbagai proyek dan kegiatan kampus.</div>
+        </section>
+    </main>
+    <footer>© 2026 Profil Website. UTS DESAIN UI/UX. </footer>
+</body>
+
+</html>

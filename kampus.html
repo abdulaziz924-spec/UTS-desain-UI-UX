@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kampus | Universitas Muhammadiyah Cileungsi</title>
+    <style>
+        :root {
+            --green: #087f5b;
+            --dark: #12372b;
+            --mint: #e8f5ef;
+            --ink: #18332b;
+            --muted: #718078
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f8f6;
+            color: var(--ink);
+            line-height: 1.6
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            background: #fff;
+            box-shadow: 0 4px 20px #12372b0b;
+            position: sticky;
+            top: 0;
+            z-index: 5
+        }
+
+        .brand {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--dark)
+        }
+
+        .brand span {
+            color: var(--green)
+        }
+
+        nav {
+            display: flex;
+            gap: 26px
+        }
+
+        nav a {
+            color: #53645c;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--green)
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #103d2d, #087f5b);
+            color: white;
+            padding: 58px 7% 65px
+        }
+
+        .hero small {
+            color: #bdebd5;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 50px);
+            margin: 10px 0
+        }
+
+        .hero p {
+            color: #d6eee2;
+            max-width: 620px
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px
+        }
+
+        .intro {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 14px 40px #12372b0c
+        }
+
+        .logo {
+            width: 145px;
+            height: 145px;
+            object-fit: contain;
+            background: #f7faf8;
+            border-radius: 16px;
+            padding: 12px
+        }
+
+        .intro-text {
+            flex: 1
+        }
+
+        .intro h2 {
+            margin: 0 0 8px;
+            font-size: 27px
+        }
+
+        .muted {
+            color: var(--muted);
+            margin: 0
+        }
+
+        .campus-photo {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 18px;
+            margin-top: 25px;
+            background: var(--mint)
+        }
+
+        .section-title {
+            font-size: 25px;
+            margin: 42px 0 18px
+        }
+
+        .cards {
+            display: flex;
+            gap: 18px
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            padding: 23px;
+            border-radius: 16px;
+            border: 1px solid #edf1ed
+        }
+
+        .card .number {
+            font-size: 25px;
+            color: var(--green);
+            font-weight: 800
+        }
+
+        .card h3 {
+            margin: 8px 0 5px
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background: #103d2d;
+            color: #d7e9df;
+            font-size: 13px
+        }
+
+        @media(max-width:700px) {
+            .navbar {
+                padding: 16px 5%;
+                align-items: flex-start;
+                gap: 14px;
+                flex-direction: column
+            }
+
+            nav {
+                gap: 17px;
+                flex-wrap: wrap
+            }
+
+            .intro,
+            .cards {
+                flex-direction: column
+            }
+
+            .intro {
+                text-align: center
+            }
+
+            .logo {
+                margin: auto
+            }
+
+            .campus-photo {
+                height: 230px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="brand">Profil<span>Kampus</span></div>
+        <nav><a href="index.html">Beranda</a><a class="active" href="kampus.html">Profil Kampus</a><a
+                href="galeri.html">Galeri</a></nav>
+    </header>
+    <section class="hero">
+        <small>Discover our campus</small>
+        <h1>Tempat Bertumbuh & Berkarya.</h1>
+        <p>Mengenal lingkungan kampus, program pendidikan, dan fasilitas yang mendukung perjalanan akademik mahasiswa.
+        </p>
+    </section>
+    <main class="container">
+        <section class="intro">
+            <img class="logo" src="images/logo-kampus.png" alt="Logo kampus">
+            <div class="intro-text">
+                <h2>Universitas Muhammadiyah Cileungsi</h2>
+                <p class="muted">Universitas Muhammadiyah Cileungsi merupakan perguruan tinggi Muhammadiyah yang berlokasi di Kecamatan Cileungsi, Kabupaten Bogor, Jawa Barat. 
+                    Kampus ini resmi menjadi universitas pada tahun 2024, setelah sebelumnya bernama Sekolah Tinggi Teknologi Muhammadiyah Cileungsi (STTMC).</p>
+                <p><b>Alamat:</b> Jl. Anggrek No.25, Perumahan PTSC, Cileungsi, Kabupaten Bogor, Jawa Barat 16820.</p>
+            </div>
+        </section>
+        <img class="campus-photo" src="images/kampus.jpg" alt="Gedung atau lingkungan kampus">
+        <h2 class="section-title">Informasi Kampus</h2>
+        <section class="cards">
+            <article class="card">
+                <div class="number">01</div>
+                <h3>Program Studi</h3>
+                <p>Rekayasa Perangkat Lunak, Teknik Informatika, dan program studi lainnya.</p>
+            </article>
+            <article class="card">
+                <div class="number">02</div>
+                <h3>Fasilitas</h3>
+                <p>Ruang kelas, laboratorium komputer, perpustakaan, dan area kegiatan mahasiswa.</p>
+            </article>
+            <article class="card">
+                <div class="number">03</div>
+                <h3>Kegiatan</h3>
+                <p>Organisasi, seminar, kompetisi, dan kegiatan pengembangan kemampuan mahasiswa.</p>
+            </article>
+        </section>
+    </main>
+    <footer>© 2026 Profil Kampus.</footer>
+</body>
+
+</html>
